@@ -1,3 +1,4 @@
+
 .signup-container {
   display: flex;
   justify-content: center;
@@ -32,7 +33,7 @@
 .image-section img {
   max-width: 80%; 
   max-height: 80%;
-  object-fit: contain; 
+  object-fit: contain;
   border-radius: 8px;
 }
 

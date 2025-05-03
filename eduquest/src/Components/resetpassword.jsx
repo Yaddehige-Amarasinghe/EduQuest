@@ -9,7 +9,6 @@ const ResetPassword = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate(); 
-
   const validatePassword = (password) => {
     const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     return regex.test(password);
@@ -35,7 +34,7 @@ const ResetPassword = () => {
     setSuccessMessage("Password has been successfully reset!");
     setShowPopup(true);
 
-    
+   
     setTimeout(() => {
       setShowPopup(false);
       navigate("/login"); 

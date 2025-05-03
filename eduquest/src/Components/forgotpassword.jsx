@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
 import "./forgotpassword.css"; 
-
 const ForgotPassword = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
   const [showPopup, setShowPopup] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false); 
-  const navigate = useNavigate(); 
-
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -34,7 +32,7 @@ const ForgotPassword = () => {
         setShowPopup(true); 
         setTimeout(() => {
           setShowPopup(false);
-          navigate("/"); 
+          navigate("/");
         }, 3000);
       } else {
         setError(data.message || "Something went wrong. Please try again.");
@@ -42,7 +40,7 @@ const ForgotPassword = () => {
     } catch (err) {
       setError("An error occurred. Please try again later.");
     } finally {
-      setIsSubmitting(false); 
+      setIsSubmitting(false);
     }
   };
 

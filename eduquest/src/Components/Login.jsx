@@ -21,10 +21,10 @@ const LoginPage = () => {
         autoClose: 3000,
       });
       
-      // Store token (optional)
+     
       localStorage.setItem("token", response.data.token);
       
-      // Redirect to dashboard after delay
+      
       setTimeout(() => navigate("/home"), 3000);
     } catch (error) {
       toast.error(error.response?.data?.message || "Login Failed ❌", {
