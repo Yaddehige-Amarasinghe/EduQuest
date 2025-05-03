@@ -28,3 +28,129 @@
   background-color: #f0f2f5;
   padding: 15px;
 }
+
+.image-section img {
+  max-width: 80%; 
+  max-height: 80%;
+  object-fit: contain; 
+  border-radius: 8px;
+}
+
+
+.form-section {
+  flex: 1.2;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+
+.form-section h2 {
+  margin-bottom: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333333;
+  text-align: center;
+}
+
+.form-description {
+  margin-bottom: 25px;
+  font-size: 1rem;
+  color: #666666;
+  text-align: center;
+}
+
+
+.form-group {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444444;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  outline: none;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #0077b6;
+  box-shadow: 0 0 5px rgba(0, 119, 182, 0.5);
+}
+
+
+.signup-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0077b6;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.signup-button:hover {
+  background-color: #005b8e;
+  transform: scale(1.03);
+}
+
+.signup-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 119, 182, 0.7);
+}
+
+
+.login-link {
+  margin-top: 18px;
+  font-size: 0.9rem;
+  color: #555555;
+  text-align: center;
+}
+
+.login-link a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+
+@media screen and (max-width: 768px) {
+  .signup-box {
+    flex-direction: column;
+  }
+
+  .image-section {
+    padding: 10px;
+  }
+
+  .form-section {
+    padding: 20px;
+  }
+
+  .image-section img {
+    max-width: 60%; 
+    max-height: 60%;
+  }
+}
