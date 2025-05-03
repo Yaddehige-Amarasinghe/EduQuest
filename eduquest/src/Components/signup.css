@@ -1,0 +1,30 @@
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px; 
+  background: linear-gradient(135deg, #48157c, #2c12d9); /* Updated modern gradient */
+}
+
+
+.signup-box {
+  display: flex;
+  flex-wrap: wrap; 
+  width: 90%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+  padding: 15px;
+}
