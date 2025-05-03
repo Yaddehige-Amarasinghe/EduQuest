@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  line-height: 1.7;
+}
+
+.explore-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+.banner {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.banner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDMyMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PHBhdGggZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIiBkPSJNMCw5NkwzMCw4MEw2MCwxMDYuN0w5MCwxNDkuM0wxMjAsOTAuN0wxNTAsNjRMMTgwLDEwNi43TDIxMCwxNDkuM0wyNDAsMTQ5LjNMMjcwLDEyOEwzMDAsMTQ5LjNMMzMwLDgwTDM2MCwxMTcuM0wzOTAsMTE3LjNMNDIwLDcyLjNMNDUwLDExNy4zTDQ4MCw3Mi4zTDUxMCw5NkM1NDAsNjQsNjAwLDAsNjMwLDBMNjYwLDBMNjkwLDBMNzIwLDBMNzUwLDBMNzgwLDBMODEwLDBMODQwLDBMODcwLDBMOTAwLDBMOTMwLDBMOTYwLDBMOTkwLDBMMTAyMCwwTDEwNTAsMEwxMDgwLDBMMTExMCwwTDExNDAsMEwxMTcwLDBMMTIwMCwwTDEyMzAsMEwxMjYwLDBMMTI5MCwwTDEzMjAsMEwxMzUwLDBMMTM4MCwwTDE0MTAsMEwxNDQwLDBMMTQ0MCw5Nkw1MTAsOTZMNDgwLDEzOC43TDQ1MCwxMDEuM0w0MjAsMTQ0TDM5MCw4MC43TDM2MCwxMDYuN0wzMzAsNDhMMzAwLDEyOEwyNzAsOTAuN0wyNDAsMTEyTDIxMCw5MC43TDE4MCwxMzguN0wxNTAsNjRMMTIwLDExNy4zTDkwLDk2TDYwLDEwMS4zTDMwLDExNy4zTDAsOTZ6Ij48L3BhdGg+PC9zdmc+') no-repeat bottom center;
+  background-size: 100% auto;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.banner p {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  padding: 5rem 2rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-top: 5px solid #3a7bd5;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #3a7bd5;
+  display: flex;
+  justify-content: center;
+}
+
+.card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #3a7bd5;
+  text-align: center;
+  font-weight: 600;
+}
+
+.card p {
+  margin-bottom: 1.8rem;
+  color: #555;
+  text-align: center;
+}
+
+.feature-list {
+  background-color: #f8f9fc;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.feature-list h3 {
+  font-size: 1.2rem;
+  color: #3a7bd5;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style-type: none;
+}
+
+.card ul li {
+  margin-bottom: 0.7rem;
+  position: relative;
+  padding-left: 1.8rem;
+  font-size: 0.95rem;
+}
+
+.card ul li:before {
+  content: "✓";
+  color: #3a7bd5;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+
+.primary-button {
+  background: linear-gradient(135deg, #3a7bd5 0%, #00d2ff 100%);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  align-self: center;
+  box-shadow: 0 4px 15px rgba(58, 123, 213, 0.3);
+  font-size: 1rem;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(58, 123, 213, 0.4);
+}
+
+
+.cta-section {
+  background: linear-gradient(135deg, #24c6dc 0%, #514a9d 100%);
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  margin-top: 3rem;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .secondary-button {
+    background-color: white;
+    color: #514a9d;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .secondary-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  }
+  
+
