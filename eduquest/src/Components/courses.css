@@ -1,5 +1,3 @@
-/* courses.css */
-
 
 .page-title {
   font-size: 3.2em;
@@ -20,7 +18,7 @@
   text-align: center;
 }
 
-/* Stream Selector */
+
 .stream-selector {
   display: flex;
   justify-content: center;
@@ -50,6 +48,118 @@
 }
 
 .stream-button:focus {
+  outline: none;
+}
+
+
+.stream-overview {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 30px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.stream-banner {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.stream-overview h1 {
+  font-size: 2.5em;
+  color: #1D3C6C;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.stream-overview p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #5F6D7E;
+  margin-bottom: 25px;
+}
+
+.subjects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.subject-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.subject-card:hover {
+  transform: translateY(-5px);
+}
+
+.subject-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subject-card h3 {
+  font-size: 1.5em;
+  color: #2C3E50;
+  margin-bottom: 15px;
+}
+
+.subject-card p {
+  font-size: 1.1em;
+  color: #7F8C8D;
+  margin-bottom: 10px;
+}
+
+.subject-card strong {
+  color: #1D3C6C;
+}
+
+/* Enroll Section */
+.enroll-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.price {
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #00A9B4;
+}
+
+.enroll-button {
+  background-color: #006F7F;
+  color: white;
+  padding: 15px 35px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.enroll-button:hover {
+  background-color: #003C4F;
+  transform: translateY(-3px);
+}
+
+.enroll-button:focus {
   outline: none;
 }
 
