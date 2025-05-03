@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-light: #f4f6f8;
+  --text-dark: #2c3e50;
+  --text-muted: #7f8c8d;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.science-materials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.materials-banner {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.banner-content {
+  flex: 1;
+  padding: 2rem;
+}
+
+.banner-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.banner-stats {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.banner-stats .stat {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255,255,255,0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+.banner-stats .stat svg {
+  margin-right: 0.5rem;
+}
+
+.banner-image {
+  flex: 1;
+}
+
+.banner-image img {
+  width: 80%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.materials-navigation {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.nav-tab {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #ecf0f1;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-tab svg {
+  margin-right: 0.5rem;
+}
+
+.nav-tab.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.materials-section {
+  background-color: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: var(--card-shadow);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.material-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+}
+
+.material-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  padding-top: 60%;
+  overflow: hidden;
+}
+
+.card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h3 {
+  margin-bottom: 0.5rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-meta {
+  margin-bottom: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+.card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.primary-action {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.primary-action svg {
+  margin-left: 0.5rem;
+}
+
+.bookmark-action {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.module-info, .resource-info {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.downloads {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .materials-banner {
+    flex-direction: column;
+  }
+
+  .banner-image img {
+    height: 250px;
+  }
+
+  .materials-navigation {
+    flex-direction: column;
+  }
+}
