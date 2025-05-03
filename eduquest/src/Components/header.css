@@ -1,0 +1,312 @@
+/* Import modern font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* CSS Custom Properties for Theming */
+:root {
+  --primary-gradient: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  --secondary-gradient: linear-gradient(135deg, #6b7280, #d1d5db);
+  --accent-gradient: linear-gradient(90deg, #f472b6, #fb7185);
+  
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --bg-glass: rgba(255, 255, 255, 0.1);
+  --bg-dark: rgba(17, 24, 39, 0.9);
+  --shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  --border: 1px solid rgba(255, 255, 255, 0.2);
+  --border-radius: 16px;
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Header Styling */
+.header {
+  position: relative; /* Changed from fixed to relative */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  background: var(--primary-gradient);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+  border-bottom: var(--border);
+  height: 5rem;
+  width: 100%;
+  z-index: 10; /* Lowered z-index for non-fixed header */
+  transition: var(--transition);
+}
+
+.header:hover {
+  background: linear-gradient(135deg, #1e40af, #60a5fa);
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  background: var(--secondary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+  background: var(--bg-glass);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+.nav-links a:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+}
+
+.nav-icon {
+  font-size: 1.5rem;
+}
+
+/* Profile Section */
+.profile-section {
+  position: relative;
+}
+
+.profile-icon {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 3px solid var(--text-primary);
+  object-fit: cover;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-icon:hover,
+.profile-icon:focus {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  outline: none;
+}
+
+/* Profile Dropdown */
+.profile-dropdown {
+  position: absolute;
+  right: 1.5rem;
+  top: 5.5rem; /* Adjusted for header height */
+  width: 28rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(15px);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  border: var(--border);
+  z-index: 100;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--accent-gradient);
+  border-bottom: var(--border);
+  flex-shrink: 0;
+}
+
+.profile-avatar-container {
+  position: relative;
+}
+
+.profile-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--text-primary);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.profile-email {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.profile-level-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #f97316, #ef4444);
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Progress Dashboard - Scrollable */
+.progress-dashboard {
+  padding: 1.5rem;
+  background: var(--bg-dark);
+  max-height: 25rem;
+  overflow-y: auto;
+  flex-grow: 1;
+  position: relative;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Scroll Shadows */
+.progress-dashboard::before,
+.progress-dashboard::after {
+  content: '';
+  position: sticky;
+  left: 0;
+  right: 0;
+  height: 1.5rem;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.progress-dashboard::before {
+  top: 0;
+  background: linear-gradient(to bottom, var(--bg-dark), transparent);
+}
+
+.progress-dashboard::after {
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg-dark), transparent);
+}
+
+/* Custom Scrollbar */
+.progress-dashboard::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.progress-dashboard::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.progress-dashboard::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+  border-radius: 0.25rem;
+}
+
+.progress-dashboard::-webkit-scrollbar-thumb:hover {
+  background: var(--text-primary);
+}
+
+/* Progress Overview */
+.progress-overview {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+  animation: slideUp 0.6s ease;
+}
+
+.progress-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: var(--bg-glass);
+  border-radius: var(--border-radius);
+  text-align: center;
+  transition: var(--transition);
+}
+
+.progress-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.progress-circle {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  background: conic-gradient(
+    #10b981 0% var(--progress),
+    var(--bg-glass) var(--progress) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--bg-dark);
+}
+
+.progress-circle span {
+  position: relative;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.progress-card h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.progress-stats-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
