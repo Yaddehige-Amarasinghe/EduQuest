@@ -1,0 +1,61 @@
+
+.services-container {
+  padding: 50px;
+  background-color: #F4F7FC;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.left-side {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.right-side {
+  flex: 1;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  color: #1C3F60;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.services-description {
+  font-size: 1.2rem;
+  color: #333333;
+  max-width: 750px;
+}
+
+
+.services-image {
+  width: 380px;
+  height: auto;
+  border-radius: 12px;
+}
+
+
+.services-card-container {
+  background-color: #FFFFFF;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.card-title {
+  font-size: 2rem;
+  color: #2D87F0;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
