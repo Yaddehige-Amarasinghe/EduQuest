@@ -34,4 +34,55 @@ const LoginPage = () => {
     }
   };
 
- 
+  return (
+    <div className="login-container">
+      <ToastContainer />
+      <div className="login-box">
+        <div className="image-section">
+          <img src="login.png" alt="Login Illustration" />
+        </div>
+        <div className="form-section">
+          <h2>Welcome Back</h2>
+          <p className="form-description">
+            Log in to access your account and continue where you left off.
+          </p>
+          <form onSubmit={handleLogin}>
+            <div className="form-group">
+              <label htmlFor="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Enter your password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit" className="login-button">
+              Login
+            </button>
+          </form>
+          <p className="signup-link">
+            Don’t have an account? <Link to="/Signup">Create one here</Link>.
+          </p>
+          <p className="forgot-password">
+            <Link to="/forgotpassword">Forgot your password?</Link>
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LoginPage;

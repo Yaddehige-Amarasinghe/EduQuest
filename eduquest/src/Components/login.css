@@ -61,3 +61,93 @@
   color: #555555;
   text-align: center;
 }
+
+.form-group {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #b0bec5;
+  border-radius: 6px;
+  outline: none;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #5bb7d1;
+  box-shadow: 0 0 4px rgba(9, 132, 227, 0.5);
+}
+
+/* Login button */
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4682b4;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #5bb7d1;
+  transform: scale(1.02);
+}
+
+.login-button:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(96, 171, 251, 0.7);
+}
+
+/* Signup link and forgot password */
+.signup-link,
+.forgot-password {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #546e7a;
+  text-align: center;
+}
+
+.signup-link a,
+.forgot-password a {
+  color: #4682b4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.signup-link a:hover,
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .login-box {
+      flex-direction: column;
+  }
+
+  .image-section {
+      padding: 10px;
+  }
+
+  .form-section {
+      padding: 25px;
+  }
+}
