@@ -8,6 +8,7 @@ import ResetPassword from "./Components/resetpassword";
 import Home from "./Components/Home";
 import Footer from "./Components/footer";
 import CoursesPage from "./Components/courses";
+import AboutUs from "./Components/aboutus";
 
 
 
@@ -25,7 +26,9 @@ function App() {
         <Route path="/forgotpassword" element={<ForgetPassword />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/courses" element={<CoursesPage />} />
-       
+        <Route path="/aboutus" element={<AboutUs />} />
+      
+        
       </Routes>
     </Router>
   );
