@@ -1,0 +1,55 @@
+/* courses.css */
+
+
+.page-title {
+  font-size: 3.2em;
+  color: #1D3C6C;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.page-description {
+  font-size: 1.2em;
+  color: #6C7C93;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+/* Stream Selector */
+.stream-selector {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.stream-button {
+  background-color: #006F7F;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1em;
+  margin: 0 15px;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stream-button.active {
+  background-color: #003C4F;
+}
+
+.stream-button:hover {
+  background-color: #00A9B4;
+  transform: translateY(-3px);
+}
+
+.stream-button:focus {
+  outline: none;
+}
+
