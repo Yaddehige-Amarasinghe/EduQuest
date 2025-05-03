@@ -6,6 +6,7 @@
   text-align: center;
 }
 
+
 .main-section {
   display: flex;
   align-items: center;
@@ -59,3 +60,144 @@
   margin-bottom: 30px;
 }
 
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background-color: #F9FAFF;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-image {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  color: #1C3F60;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #555555;
+}
+
+
+.social-proof-section {
+  margin-top: 50px;
+  padding: 40px;
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.social-proof-title {
+  font-size: 2rem;
+  color: #2D87F0;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.stat-card {
+  background-color: #F9FAFF;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 200px;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.stat-icon {
+  font-size: 3rem;
+  color: #2D87F0;
+  margin-bottom: 10px;
+}
+
+.stat-card h3 {
+  font-size: 1.8rem;
+  color: #1C3F60;
+}
+
+.stat-card p {
+  font-size: 1rem;
+  color: #555555;
+}
+
+
+.learning-experience-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  padding: 40px;
+}
+
+.left-learning {
+  flex: 1;
+  text-align: center;
+}
+
+.learning-image {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.right-learning {
+  flex: 1;
+  text-align: center; 
+  padding-left: 20px;
+}
+
+.learning-title {
+  font-size: 2rem;
+  color: #2D87F0;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.learning-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.learning-list li {
+  padding: 8px 0;
+  display: flex;
+  justify-content: center; /* Center the list items */
+  align-items: center;
+  gap: 10px;
+}
