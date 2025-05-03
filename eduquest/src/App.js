@@ -5,6 +5,7 @@ import SignupPage from "./Components/Signup";
 import Header from "./Components/Header";
 import ForgetPassword from "./Components/forgotpassword";
 import ResetPassword from "./Components/resetpassword";
+import Footer from "./Components/footer";
 
 
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/header" element={<Header />} />
+        <Route path="/footer" element={<Footer />} />
         <Route path="/forgotpassword" element={<ForgetPassword />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
         
