@@ -1,8 +1,8 @@
-/* Footer.css */
+
 .footer {
-  background-color: #222;  /* Darker background */
+  background-color: #222; 
   color: white;
-  padding: 40px 20px;  /* Adjusted padding */
+  padding: 40px 20px; 
   text-align: center;
   box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -14,13 +14,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;  /* Adjusted max-width */
+  max-width: 1100px;  
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
 .footer-logo h1 {
-  font-size: 28px;  /* Adjusted font size */
+  font-size: 28px; 
   color: #41bbf4;
   font-weight: bold;
   margin-bottom: 0;
@@ -34,13 +34,13 @@
 }
 
 .footer-links li {
-  margin-left: 25px;  /* Adjusted margin */
+  margin-left: 25px;  
 }
 
 .footer-links li a {
   text-decoration: none;
   color: white;
-  font-size: 14px;  /* Adjusted font size */
+  font-size: 14px;  
   transition: color 0.3s ease;
 }
 
@@ -56,8 +56,8 @@
 .social-icon {
   text-decoration: none;
   color: white;
-  font-size: 20px;  /* Adjusted font size */
-  margin: 0 8px;    /* Adjusted spacing between icons */
+  font-size: 20px;  
+  margin: 0 8px;    
   transition: color 0.3s ease;
 }
 
@@ -66,8 +66,8 @@
 }
 
 .footer-bottom {
-  margin-top: 30px;  /* Adjusted margin-top */
-  font-size: 12px;  /* Adjusted font size */
+  margin-top: 30px;  
+  font-size: 12px; 
   color: #aaa;
 }
 

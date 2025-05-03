@@ -1,7 +1,7 @@
-/* Import modern font */
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
-/* CSS Custom Properties for Theming */
+
 :root {
   --primary-gradient: linear-gradient(135deg, #1e3a8a, #3b82f6);
   --secondary-gradient: linear-gradient(135deg, #6b7280, #d1d5db);
@@ -16,7 +16,7 @@
   --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Global Reset */
+
 * {
   margin: 0;
   padding: 0;
@@ -24,9 +24,9 @@
   font-family: 'Inter', sans-serif;
 }
 
-/* Header Styling */
+
 .header {
-  position: relative; /* Changed from fixed to relative */
+  position: relative; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -37,7 +37,7 @@
   border-bottom: var(--border);
   height: 5rem;
   width: 100%;
-  z-index: 10; /* Lowered z-index for non-fixed header */
+  z-index: 10;
   transition: var(--transition);
 }
 
@@ -45,7 +45,7 @@
   background: linear-gradient(135deg, #1e40af, #60a5fa);
 }
 
-/* Logo */
+
 .logo h1 {
   font-size: 2.25rem;
   font-weight: 700;
@@ -56,7 +56,7 @@
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -96,7 +96,7 @@
   font-size: 1.5rem;
 }
 
-/* Profile Section */
+
 .profile-section {
   position: relative;
 }
@@ -119,11 +119,11 @@
   outline: none;
 }
 
-/* Profile Dropdown */
+
 .profile-dropdown {
   position: absolute;
   right: 1.5rem;
-  top: 5.5rem; /* Adjusted for header height */
+  top: 5.5rem; 
   width: 28rem;
   background: var(--bg-glass);
   backdrop-filter: blur(15px);
@@ -142,7 +142,7 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Profile Header */
+
 .profile-header {
   display: flex;
   align-items: center;
@@ -192,7 +192,7 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Progress Dashboard - Scrollable */
+
 .progress-dashboard {
   padding: 1.5rem;
   background: var(--bg-dark);
@@ -203,7 +203,7 @@
   animation: fadeIn 0.5s ease;
 }
 
-/* Scroll Shadows */
+
 .progress-dashboard::before,
 .progress-dashboard::after {
   content: '';
@@ -225,7 +225,7 @@
   background: linear-gradient(to top, var(--bg-dark), transparent);
 }
 
-/* Custom Scrollbar */
+
 .progress-dashboard::-webkit-scrollbar {
   width: 0.5rem;
 }
@@ -243,7 +243,7 @@
   background: var(--text-primary);
 }
 
-/* Progress Overview */
+
 .progress-overview {
   display: flex;
   gap: 1.25rem;
@@ -357,7 +357,7 @@
   font-weight: 600;
 }
 
-/* Level Progress */
+
 .level-progress-container {
   background: var(--bg-glass);
   border-radius: var(--border-radius);
@@ -397,7 +397,7 @@
   transition: width 0.5s ease;
 }
 
-/* Learning Breakdown */
+
 .learning-breakdown {
   background: var(--bg-glass);
   border-radius: var(--border-radius);
@@ -502,7 +502,7 @@
   background: linear-gradient(to right, #8b5cf6, #a78bfa);
 }
 
-/* Achievements Section */
+
 .achievements-section {
   background: var(--bg-glass);
   border-radius: var(--border-radius);
@@ -595,7 +595,7 @@
   color: var(--text-secondary);
 }
 
-/* Footer */
+
 .profile-dropdown-footer {
   display: flex;
   justify-content: space-between;
@@ -646,7 +646,7 @@
   font-size: 1rem;
 }
 
-/* Login Link */
+
 .login-link {
   background: var(--bg-glass);
   padding: 0.75rem 1.25rem;
@@ -655,7 +655,7 @@
   font-size: 1.125rem;
 }
 
-/* Animations */
+
 @keyframes slideUp {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
@@ -666,7 +666,7 @@
   to { opacity: 1; }
 }
 
-/* Responsive Adjustments */
+
 @media (max-width: 768px) {
   .header {
     padding: 1rem 1.5rem;
@@ -698,7 +698,7 @@
   .profile-dropdown {
     width: 22rem;
     right: 1rem;
-    top: 4.5rem; /* Adjusted for header height */
+    top: 4.5rem; 
   }
 
   .progress-dashboard {
@@ -753,7 +753,7 @@
   .profile-dropdown {
     width: 18rem;
     right: 0.5rem;
-    top: 8rem; /* Adjusted for column layout and header height */
+    top: 8rem;
   }
 
   .progress-dashboard {
