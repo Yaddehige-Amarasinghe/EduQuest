@@ -8,7 +8,7 @@ import Footer from './footer';
 
 const StreamsPage = () => {
   const [selectedStream, setSelectedStream] = useState('science');
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   const streamsData = {
     science: {
@@ -62,4 +62,52 @@ const StreamsPage = () => {
     
   };
 
- 
+  const StreamSelector = () => (
+    <div className="stream-selector">
+      {Object.keys(streamsData).map(stream => (
+        <button
+          key={stream}
+          className={`stream-button ${selectedStream === stream ? 'active' : ''}`}
+          onClick={() => setSelectedStream(stream)}
+        >
+          {streamsData[stream].title}
+        </button>
+      ))}
+    </div>
+  );
+
+  const StreamOverview = ({ data }) => (
+    <div className="stream-overview">
+      <img src={data.image} alt={data.title} className="stream-banner" />
+      <h1>{data.title}</h1>
+      <p>{data.description}</p>
+      <div className="subjects-grid">
+        {data.subjects.map((subject, index) => (
+          <div key={index} className="subject-card">
+            <img src={subject.image} alt={subject.name} className="subject-image" />
+            <h3>{subject.name}</h3>
+            <p><strong>Topics:</strong> {subject.topics.join(", ")}</p>
+            <p><strong>Careers:</strong> {subject.careers.join(", ")}</p>
+          </div>
+        ))}
+      </div>
+      <div className="enroll-section">
+        <span className="price">Rs{data.price} / year</span>
+        <button className="enroll-button" onClick={() => navigate('/payment')}>Enroll Now</button>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className="streams-page">
+      <Header />
+      <h1 className="page-title">Advanced Level Study Streams</h1>
+      <p className="page-description">Choose from a variety of streams that cater to different interests and career paths. Our detailed courses provide in-depth learning and expertise.</p>
+      <StreamSelector />
+      <StreamOverview data={streamsData[selectedStream]} />
+      <Footer />
+    </div>
+  );
+};
+
+export default StreamsPage;
